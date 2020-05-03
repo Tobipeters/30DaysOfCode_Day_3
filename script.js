@@ -192,10 +192,10 @@ emptyInputError = () => {
 
         age.style.borderColor = '#000'
         gender.style.borderColor = '#000'
-        document.getElementById('height_unit').style.borderColor = '#000';
-        document.getElementById('height_value').style.borderColor = '#000';
-        document.getElementById('weight_value').style.borderColor = '#000';
-        document.getElementById('weight_unit').style.borderColor = '#000';
+        document.getElementById('height_unit').style.borderColor = '#ff0c00c9';
+        document.getElementById('height_value').style.borderColor = '#ff0c00c9';
+        document.getElementById('weight_value').style.borderColor = '#ff0c00c9';
+        document.getElementById('weight_unit').style.borderColor = '#ff0c00c9';
 
 
         document.getElementById('height_unit').style.backgroundColor = '#F6F6F6';
