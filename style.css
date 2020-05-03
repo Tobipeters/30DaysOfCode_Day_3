@@ -27,7 +27,7 @@ p{
     font-weight: 600;
 }
 .center-content{
-    margin: 20px 30px;
+    margin: 0 auto;
 }
 .pad-cont{
     padding: 30px;
@@ -70,16 +70,16 @@ input, select {
     padding: 5px;
 }
 #gender{
-    width: 174px;
+    width: 156px;
 }
 #age{
-    width: 160px;
+    width: 150px;
 }
 #weight_unit, #height_unit{
     margin-left: -5px;
 }
 input{
-    width: 111px;
+    width: 95px;
 }
 input:focus{
     border: none;
