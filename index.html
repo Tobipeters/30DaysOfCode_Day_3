@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script type="text/javascript" src="script.js"></script>
+    <title>30DaysOfCode | BMI Calculator</title>
+</head>
+
+<body>
+    <div class="pad-cont">
+
+        <div class="container">
+            <div class="center-content">
+
+                <div class="result_cont">
+                    <h2 class="title" id="title">CALCULATE YOUR BMI</h2>
+                    <!-- <span>YOUR RESULT</span>
+                    <br>
+                    <span class="result_value" id="result">19</span>
+                    <br>
+                    <span >YOU'RE IN A GREAT SHAPE</span> -->
+                </div>
+                <div class="row-one">
+                    <div class="gender-cont">
+                        <label for="gender">Gender</label>
+                        <br>
+                        <select name="gender" id="gender">
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </div>
+                    <div class="age-cont">
+                        <label for="age">Age</label>
+                        <br>
+                        <input type="number" name="age" id="age">
+                    </div>
+                </div>
+                <br>
+                <div class="row-two">
+                    <div class="height-cont">
+                        <label for="height">Height</label>
+                        <br>
+                        <input type="number" name="height" id="height_value">
+                        <select name="height_unit" id="height_unit">
+                            <option value="cm">cm</option>
+                            <option value=""></option>
+                        </select>
+                    </div>
+                    <div class="weight-cont">
+                        <label for="weight">Weight</label>
+                        <br>
+                        <input type="number" name="weight" id="weight_value">
+                        <select name="weight_unit" id="weight_unit">
+                            <option value="kg">Kg</option>
+                            <option value="ibs">Ibs</option>
+                        </select>
+                    </div>
+                </div>
+                <button class="btn"> CALCULATE </button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+body{
+    position: relative;
+    margin: 0;
+    padding: 0; 
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    background:#F6F6F6;
+    color: #000;
+}
+/* 
+different background color 
+#C1E999 >>> blemd of green
+#87B1E2 >>>> blend of blue
+#F6F6F6 >>>> off white
+#F9E58C >>>> blend of orange
+#F38B8C >>>> blend of red
+#8D8DD3 >>>> button when off white
+
+*/
+.pad-cont{
+    padding: 30px;
+}
+.result_cont{
+    margin-bottom: 100px;
+}
+.result_value{
+    font-size: 48px;
+}
+.title{
+   
+}
+.container{
+    margin: 50px auto ;
+    display: flex;
+    justify-content: center;
+}
+.row-one, .row-two{
+    width: 100%;
+    display: flex;
+    margin-bottom: 50px;
+}
+.gender-cont, .height-cont{
+    margin-right: 50px;
+}
+input, select {
+    border: none;
+    border-bottom: 1px solid black;
+    margin-top:12px;
+    background: #F6F6F6;
+}
+#gender, #age{
+    width: 150px;
+}
+#weight_unit, #height_unit{
+    margin-left: -5px;
+}
+input{
+    width: 111px;
+}
+
+.btn{
+    width: 100%;
+    display: block;
+    margin:100px auto 0;
+    padding: 15px 0;
+    font-weight: 600;
+    background: #8D8DD3;
+    color: #fff;
+}
