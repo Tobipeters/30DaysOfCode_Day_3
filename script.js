@@ -37,8 +37,9 @@ calculateBmi = () => {
     textOne.innerHTML = 'YOUR RESULT';
     bmiResult.innerHTML = result;
 
-    emptyInputError();
-     if (result === NaN){
+    emptyInputError(result);
+    if (weightValue !== '' || heightValue !== ''){    
+      if (result === ''){
         textTwo.innerHTML = ''
 
         body.style.backgroundColor = '#F6F6F6';
@@ -185,12 +186,15 @@ calculateBmi = () => {
         button.style.backgroundColor = '#fff'
         button.style.color = '#000'
     }
+}
   
     subTitle.innerHTML = 'BMI CALCULATOR'
 }
 
 //Error pop up if inpt fields are empty
-emptyInputError = () => {
+emptyInputError = (result) => {
+    result = result;
+    console.log(result)
     var heightValue = document.getElementById('height_value').value;
     var weightValue = document.getElementById('weight_value').value;
     var subTitle = document.getElementById('sub-title');
@@ -198,7 +202,7 @@ emptyInputError = () => {
     var textTwo = document.getElementById('text-two');
     var bmiResult = document.getElementById('result');
     var error = document.getElementById('error');
-    if (heightValue === '' || weightValue === '') {
+    if (heightValue === ''  || weightValue === '' && result === NaN) {
         subTitle.innerHTML = '';
         title.innerHTML = ''
         textOne.innerHTML = '';
