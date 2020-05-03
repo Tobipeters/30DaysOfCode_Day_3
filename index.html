@@ -29,6 +29,7 @@
                         <label for="gender">Gender</label>
                         <br>
                         <select name="gender" id="gender">
+                            <option selected value="choose">Select Gender</option>
                             <option value="male">Male</option>
                             <option value="female">Female</option>
                         </select>
@@ -36,7 +37,7 @@
                     <div class="age-cont">
                         <label for="age">Age</label>
                         <br>
-                        <input type="number" name="age" id="age">
+                        <input type="number" name="age" id="age" placeholder="Age">
                     </div>
                 </div>
                 <br>
@@ -44,7 +45,7 @@
                     <div class="height-cont">
                         <label for="height">Height</label>
                         <br>
-                        <input type="number" name="height" id="height_value">
+                        <input type="number" name="height" id="height_value" placeholder="Height" required>
                         <select name="height_unit" id="height_unit">
                             <option value="cm">cm</option>
                         </select>
@@ -52,7 +53,7 @@
                     <div class="weight-cont">
                         <label for="weight">Weight</label>
                         <br>
-                        <input type="number" name="weight" id="weight_value">
+                        <input type="number" name="weight" id="weight_value" placeholder="Weight" required>
                         <select name="weight_unit" id="weight_unit">
                             <option value="kg">Kg</option>
                             <option value="ib">Ib</option>
@@ -63,7 +64,7 @@
             </div>
         </div>
     </div>
-    
+
 </body>
 
 </html>
