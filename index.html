@@ -10,19 +10,18 @@
     <title>30DaysOfCode | BMI Calculator</title>
 </head>
 
-<body>
+<body id="body">
     <div class="pad-cont">
 
         <div class="container">
             <div class="center-content">
 
                 <div class="result_cont">
+                    <h3 id="sub-title"></h3>
                     <h2 class="title" id="title">CALCULATE YOUR BMI</h2>
-                    <!-- <span>YOUR RESULT</span>
-                    <br>
-                    <span class="result_value" id="result">19</span>
-                    <br>
-                    <span >YOU'RE IN A GREAT SHAPE</span> -->
+                    <p id="text-one"></p>
+                    <p class="result_value" id="result"></p>
+                    <p id="text-two"></p>
                 </div>
                 <div class="row-one">
                     <div class="gender-cont">
@@ -47,7 +46,6 @@
                         <input type="number" name="height" id="height_value">
                         <select name="height_unit" id="height_unit">
                             <option value="cm">cm</option>
-                            <option value=""></option>
                         </select>
                     </div>
                     <div class="weight-cont">
@@ -56,11 +54,11 @@
                         <input type="number" name="weight" id="weight_value">
                         <select name="weight_unit" id="weight_unit">
                             <option value="kg">Kg</option>
-                            <option value="ibs">Ibs</option>
+                            <option value="ib">Ib</option>
                         </select>
                     </div>
                 </div>
-                <button class="btn"> CALCULATE </button>
+                <button id="btn" class="btn" onclick="calculateBmi()"> CALCULATE </button>
             </div>
         </div>
     </div>
