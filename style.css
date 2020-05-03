@@ -118,4 +118,7 @@ label{
     input{
         width: 75px;
     }
+    select{
+        padding: 5px 5px 4px;
+    }
 }
