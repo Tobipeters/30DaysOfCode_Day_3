@@ -29,16 +29,25 @@ different background color
     padding: 30px;
 }
 .result_cont{
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 .result_value{
     font-size: 48px;
+}
+#error{
+    text-align: center;
+    padding: 20px;
+    background: #ff0c00c9;
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    display: none;
 }
 .title{
    
 }
 .container{
-    margin: 50px auto ;
+    margin: 10px auto 0 ;
     display: flex;
     justify-content: center;
 }

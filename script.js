@@ -1,32 +1,34 @@
 var textOne = document.getElementById('text-one');
 var textTwo = document.getElementById('text-two');
+var error = document.getElementById('error');
+
 
 //function for calculating BMI value 
-calculateBmi = () =>{
-    let heightValue = document.getElementById('height_value').value;
-    let weightValue = document.getElementById('weight_value').value;
-    let heightUnit = document.getElementById('height_unit').value;
-    let weightUnit = document.getElementById('weight_unit').value;
-    let age = document.getElementById('age');
-    let gender = document.getElementById('gender');
+calculateBmi = () => {
+    var heightValue = document.getElementById('height_value').value;
+    var weightValue = document.getElementById('weight_value').value;
+    var heightUnit = document.getElementById('height_unit').value;
+    var weightUnit = document.getElementById('weight_unit').value;
+    var age = document.getElementById('age');
+    var gender = document.getElementById('gender');
     var title = document.getElementById('title');
-    let textOne = document.getElementById('text-one');
-    let textTwo = document.getElementById('text-two');
+    var textOne = document.getElementById('text-one');
+    var textTwo = document.getElementById('text-two');
     var body = document.getElementById('body');
     var button = document.getElementById('btn');
     var subTitle = document.getElementById('sub-title');
     var result;
     var bmiResult = document.getElementById('result');
 
-    let inMeter = heightValue / 100;
+    var inMeter = heightValue / 100;
     inMeter = inMeter * inMeter
     if (weightUnit === 'ib') {
-        inKg = weightValue * 0.453592 
+        inKg = weightValue * 0.453592
         console.log(inKg)
         result = inKg / inMeter
         console.log(result)
-    result = result.toFixed(2)
-    } else if (weightUnit === 'kg'){
+        result = result.toFixed(2)
+    } else if (weightUnit === 'kg') {
         result = weightValue / inMeter
         result = result.toFixed(2)
         console.log(result)
@@ -34,10 +36,40 @@ calculateBmi = () =>{
     title.innerHTML = ''
     textOne.innerHTML = 'YOUR RESULT';
     bmiResult.innerHTML = result;
- 
-emptyInputError();
 
-    if (result < 18.5) {
+    emptyInputError();
+     if (result === NaN){
+        textTwo.innerHTML = ''
+
+        body.style.backgroundColor = '#F6F6F6';
+        body.style.color = '#fff'
+        age.style.color = '#fff'
+        gender.style.color = '#fff'
+        document.getElementById('height_unit').style.color = '#fff';
+        document.getElementById('height_value').style.color = '#fff';
+        document.getElementById('weight_value').style.color = '#fff';
+        document.getElementById('weight_unit').style.color = '#fff';
+
+        age.style.borderColor = '#fff'
+        gender.style.borderColor = '#fff'
+        document.getElementById('height_unit').style.borderColor = '#fff';
+        document.getElementById('height_value').style.borderColor = '#fff';
+        document.getElementById('weight_value').style.borderColor = '#fff';
+        document.getElementById('weight_unit').style.borderColor = '#fff';
+
+
+        document.getElementById('height_unit').style.backgroundColor = '#F6F6F6';
+        document.getElementById('height_value').style.backgroundColor = '#F6F6F6';
+        document.getElementById('weight_value').style.backgroundColor = '#F6F6F6';
+        document.getElementById('weight_unit').style.backgroundColor = '#F6F6F6';
+
+        age.style.backgroundColor = '#F6F6F6';
+        gender.style.backgroundColor = '#F6F6F6';
+        button.style.backgroundColor ='#8D8DD3';
+        button.style.color = '#fff'
+    }
+
+    else if (result < 18.5) {
         textTwo.innerHTML = 'YOU\'RE UNDERWEIGHT'
 
         body.style.backgroundColor = '#87B1E2';
@@ -67,7 +99,7 @@ emptyInputError();
         button.style.backgroundColor = '#fff'
         button.style.color = '#000'
     }
-    else if (result < 25){
+    else if (result < 25) {
         textTwo.innerHTML = 'YOU\'RE HEALTHY IN WEIGHT'
 
         body.style.backgroundColor = '#C1E999';
@@ -95,7 +127,7 @@ emptyInputError();
         button.style.backgroundColor = '#fff'
         button.style.color = '#000'
     }
-    else if (result < 30){
+    else if (result < 30) {
         textTwo.innerHTML = 'YOU\'RE OVERWEIGHT'
 
         body.style.backgroundColor = '#F9E58C';
@@ -123,7 +155,7 @@ emptyInputError();
         button.style.backgroundColor = '#fff'
         button.style.color = '#000'
     }
-    else if (result < 40){
+    else if (result > 30) {
         textTwo.innerHTML = 'YOU\'RE OBESE'
 
         body.style.backgroundColor = '#F38B8C';
@@ -153,12 +185,30 @@ emptyInputError();
         button.style.backgroundColor = '#fff'
         button.style.color = '#000'
     }
+  
     subTitle.innerHTML = 'BMI CALCULATOR'
 }
 
 //Error pop up if inpt fields are empty
-emptyInputError = () =>{
+emptyInputError = () => {
+    var heightValue = document.getElementById('height_value').value;
+    var weightValue = document.getElementById('weight_value').value;
     var subTitle = document.getElementById('sub-title');
-    subTitle.innerHTML = '';
+    var textOne = document.getElementById('text-one');
+    var textTwo = document.getElementById('text-two');
+    var bmiResult = document.getElementById('result');
+    var error = document.getElementById('error');
+    if (heightValue === '' || weightValue === '') {
+        subTitle.innerHTML = '';
+        title.innerHTML = ''
+        textOne.innerHTML = '';
+        bmiResult.innerHTML = '';
+        textTwo.innerHTML = '';
+        error.innerHTML = 'Enter your height and weight values'
+        error.style.display = 'block'
+        return;
+    }else{
+        error.style.display = 'none'
+    }
 }
 
