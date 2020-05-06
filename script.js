@@ -42,6 +42,8 @@ calculateBmi = () => {
         if (result < 18.5) {
             textTwo.innerHTML = 'YOU\'RE UNDERWEIGHT'
 
+             // page style when underweight
+
             body.style.backgroundColor = '#87B1E2';
             body.style.color = '#fff'
             age.style.color = '#fff'
@@ -72,6 +74,8 @@ calculateBmi = () => {
         else if (result < 25) {
             textTwo.innerHTML = 'YOU\'RE HEALTHY IN WEIGHT'
 
+            // page style when healthy in weight 
+
             body.style.backgroundColor = '#C1E999';
             body.style.color = '#000'
             age.style.color = '#000'
@@ -100,6 +104,8 @@ calculateBmi = () => {
         else if (result < 30) {
             textTwo.innerHTML = 'YOU\'RE OVERWEIGHT'
 
+            // page style when Overweight
+
             body.style.backgroundColor = '#F9E58C';
             body.style.color = '#000'
             age.style.color = '#000'
@@ -127,6 +133,8 @@ calculateBmi = () => {
         }
         else if (result > 30) {
             textTwo.innerHTML = 'YOU\'RE OBESE'
+
+             // page style when Obese
 
             body.style.backgroundColor = '#F38B8C';
             body.style.color = '#fff'
@@ -162,7 +170,7 @@ calculateBmi = () => {
     subTitle.innerHTML = 'BMI CALCULATOR'
 }
 
-//Error pop up if inpt fields are empty
+//Error pop up if input fields are empty
 emptyInputError = () => {
 
     var heightValue = document.getElementById('height_value').value;
@@ -180,7 +188,11 @@ emptyInputError = () => {
         bmiResult.innerHTML = '';
         textTwo.innerHTML = '';
         error.innerHTML = 'Enter your height and weight values'
+        //Make Error message visible
         error.style.display = 'block'
+
+        //After Error logs it displays the default page style
+
         body.style.backgroundColor = '#F6F6F6';
         body.style.color = '#000';
         age.style.color = '#000';
