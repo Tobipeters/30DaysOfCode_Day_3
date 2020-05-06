@@ -1,26 +1,27 @@
-var textOne = document.getElementById('text-one');
-var textTwo = document.getElementById('text-two');
-var error = document.getElementById('error');
+let textOne = document.getElementById('text-one');
+let textTwo = document.getElementById('text-two');
+let error = document.getElementById('error');
+
 
 
 //function for calculating BMI value 
 calculateBmi = () => {
-    var heightValue = document.getElementById('height_value').value;
-    var weightValue = document.getElementById('weight_value').value;
-    var heightUnit = document.getElementById('height_unit').value;
-    var weightUnit = document.getElementById('weight_unit').value;
-    var age = document.getElementById('age');
-    var gender = document.getElementById('gender');
-    var title = document.getElementById('title');
-    var textOne = document.getElementById('text-one');
-    var textTwo = document.getElementById('text-two');
-    var body = document.getElementById('body');
-    var button = document.getElementById('btn');
-    var subTitle = document.getElementById('sub-title');
-    var result;
-    var bmiResult = document.getElementById('result');
+    let heightValue = document.getElementById('height_value').value;
+    let weightValue = document.getElementById('weight_value').value;
+    let heightUnit = document.getElementById('height_unit').value;
+    let weightUnit = document.getElementById('weight_unit').value;
+    let age = document.getElementById('age');
+    let gender = document.getElementById('gender');
+    let title = document.getElementById('title');
+    let textOne = document.getElementById('text-one');
+    let textTwo = document.getElementById('text-two');
+    let body = document.getElementById('body');
+    let button = document.getElementById('btn');
+    let subTitle = document.getElementById('sub-title');
+    let result;
+    let bmiResult = document.getElementById('result');
 
-    var inMeter = heightValue / 100;
+    let inMeter = heightValue / 100;
     inMeter = inMeter * inMeter
     if (weightUnit === 'ib') {
         inKg = weightValue * 0.453592
@@ -173,14 +174,14 @@ calculateBmi = () => {
 //Error pop up if input fields are empty
 emptyInputError = () => {
 
-    var heightValue = document.getElementById('height_value').value;
-    var weightValue = document.getElementById('weight_value').value;
-    var subTitle = document.getElementById('sub-title');
-    var textOne = document.getElementById('text-one');
-    var textTwo = document.getElementById('text-two');
-    var bmiResult = document.getElementById('result');
-    var error = document.getElementById('error');
-    var button = document.getElementById('btn');
+    let heightValue = document.getElementById('height_value').value;
+    let weightValue = document.getElementById('weight_value').value;
+    let subTitle = document.getElementById('sub-title');
+    let textOne = document.getElementById('text-one');
+    let textTwo = document.getElementById('text-two');
+    let bmiResult = document.getElementById('result');
+    let error = document.getElementById('error');
+    let button = document.getElementById('btn');
     if (heightValue === '' || weightValue === '') {
         subTitle.innerHTML = '';
         title.innerHTML = ''
