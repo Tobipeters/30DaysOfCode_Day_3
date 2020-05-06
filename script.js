@@ -25,14 +25,14 @@ calculateBmi = () => {
     inMeter = inMeter * inMeter
     if (weightUnit === 'ib') {
         inKg = weightValue * 0.453592
-        console.log(inKg)
+        // console.log(inKg)
         result = inKg / inMeter
-        console.log(result)
+        // console.log(result)
         result = result.toFixed(2)
     } else if (weightUnit === 'kg') {
         result = weightValue / inMeter
         result = result.toFixed(2)
-        console.log(result)
+        // console.log(result)
     }
     title.innerHTML = ''
     textOne.innerHTML = 'YOUR RESULT';
